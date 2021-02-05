@@ -164,6 +164,38 @@ namespace TestMaximumUsingNUnitTest
             string maximumNumber = maximum.FindMaximumNumber();
             Assert.AreEqual("C", maximumNumber);
         }
+        ///<SUMMARY>
+        ///Extend the Max Method to take More then Three integer Parameter
+        ///<SUMMARY>
+        [Test]
+        public void GivenNumber_WhenTested_ReturnMaxximumIntegerNumber()
+        {
+            GetMaximumUsingGeneric<int> maximum = new GetMaximumUsingGeneric<int>();
+            int maximumNumber = maximum.FindMaximumNumber(1, 2, 3, 50, 60, 20);
+            Assert.AreEqual(60, maximumNumber);
+        }
+
+        ///<SUMMARY>
+        ///Extend the Max Method to take More then Three float Parameter
+        ///<SUMMARY>
+        [Test]
+        public void GivenNumber_WhenTested_ReturnMaxximumFloatNumber()
+        {
+            GetMaximumUsingGeneric<float> maximum = new GetMaximumUsingGeneric<float>();
+            float maximumNumber = maximum.FindMaximumNumber(1f, 2f, 3f, 50f, 20f, 60f);
+            Assert.AreEqual(60f, maximumNumber);
+        }
+
+        ///<SUMMARY>
+        ///Extend the Max Method to take More then Three string Parameter
+        ///<SUMMARY>
+        [Test]
+        public void GivenNumber_WhenTested_ReturnMaxximumString()
+        {
+            GetMaximumUsingGeneric<string> maximum = new GetMaximumUsingGeneric<string>();
+            string maximumNumber = maximum.FindMaximumNumber("A", "Z", "M", "N", "U");
+            Assert.AreEqual("Z", maximumNumber);
+        }
 
     }
 }
