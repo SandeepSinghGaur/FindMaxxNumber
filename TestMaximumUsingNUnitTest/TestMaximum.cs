@@ -70,5 +70,37 @@ namespace TestMaximumUsingNUnitTest
             float maximumNumber = maximum.FindMaximumNumber(1f, 3f, 4f);
             Assert.AreEqual(4f, maximumNumber);
         }
+        ///<SUMMARY>
+        ///PASSING THREE STRING  WHEN MAXIMUM STRING  PRESENT AT FIRST POSITION,RETURN TRUE OTHERWISE RETURN FALSE.
+        ///<SUMMARY>
+        [Test]
+        public void GivenStringMaximumNumber_WhenAtFirstPosition_ReturnTrue()
+        {
+            GetMaximum maximum = new GetMaximum();
+            string maximumNumber = maximum.FindMaximumNumber("C", "A", "B");
+            Assert.AreEqual("C", maximumNumber);
+        }
+
+        ///<SUMMARY>
+        ///PASSING THREE STRING  WHEN MAXIMUM STRING  PRESENT AT SECOND POSITION,RETURN TRUE OTHERWISE RETURN FALSE.
+        ///<SUMMARY>
+        [Test]
+        public void GivenStringMaximumNumber_WhenAtSecondPosition_ReturnTrue()
+        {
+            GetMaximum maximum = new GetMaximum();
+            string maximumNumber = maximum.FindMaximumNumber("A", "C", "B");
+            Assert.AreEqual("C", maximumNumber);
+        }
+
+        ///<SUMMARY>
+        ///PASSING THREE STRING  WHEN MAXIMUM STRING  PRESENT AT THIRD POSITION,RETURN TRUE OTHERWISE RETURN FALSE.
+        ///<SUMMARY>
+        [Test]
+        public void GivenStringMaximumNumber_WhenAtThirdPosition_ReturnTrue()
+        {
+            GetMaximum maximum = new GetMaximum();
+            string maximumNumber = maximum.FindMaximumNumber("B", "A", "C");
+            Assert.AreEqual("C", maximumNumber);
+        }
     }
 }

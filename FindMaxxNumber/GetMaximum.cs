@@ -38,5 +38,21 @@ namespace FindMaxxNumber
                 maximum = Z_Number;
             return maximum;
         }
+        /// <summary>
+        /// Pass Three string  and Return Alphabatically Largest string Number
+        /// </summary>
+        /// <param name="first_string"></param>
+        /// <param name="second_string"></param>
+        /// <param name="third_string"></param>
+        /// <returns></returns>
+        public string FindMaximumNumber(string first_string, string second_string, string third_string)
+        {
+            string maximum = first_string;
+            if (maximum.CompareTo(second_string) < 0)
+                maximum = second_string;
+            if (maximum.CompareTo(third_string) < 0)
+                maximum = third_string;
+            return maximum;
+        }
     }
 }
