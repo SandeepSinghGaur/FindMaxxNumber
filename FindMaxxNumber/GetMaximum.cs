@@ -54,5 +54,22 @@ namespace FindMaxxNumber
                 maximum = third_string;
             return maximum;
         }
+        /// <summary>
+        /// By Using Generic Method trying to Calculate Calculate Maximum 
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="firstNumber"></param>
+        /// <param name="secondNumber"></param>
+        /// <param name="thirdNumber"></param>
+        /// <returns></returns>
+        public T FindMaximumNumber<T>(T firstNumber, T secondNumber, T thirdNumber) where T : IComparable
+        {
+            T maximum = firstNumber;
+            if (maximum.CompareTo(secondNumber) < 0)
+                maximum = secondNumber;
+            if (maximum.CompareTo(thirdNumber) < 0)
+                maximum = thirdNumber;
+            return maximum;
+        }
     }
 }

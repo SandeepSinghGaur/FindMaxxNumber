@@ -102,5 +102,37 @@ namespace TestMaximumUsingNUnitTest
             string maximumNumber = maximum.FindMaximumNumber("B", "A", "C");
             Assert.AreEqual("C", maximumNumber);
         }
+        ///<SUMMARY>
+        ///PASSING THREE INTEGER BY USING GENERIC CONCEPT WHEN MAXIMUM INTEGER PRESENT AT FIRST POSITION,RETURN TRUE OTHERWISE RETURN FALSE.
+        ///<SUMMARY>
+        [Test]
+        public void GivenIntegerMaximumNumber_WhenAtFirstPosition_ReturnTrue()
+        {
+            GetMaximum maximum = new GetMaximum();
+            int maximumNumber = maximum.FindMaximumNumber<int>(400, 300, 200);
+            Assert.AreEqual(400, maximumNumber);
+        }
+
+        ///<SUMMARY>
+        ///PASSING THREE FLOAT BY USING GENERIC CONCEPT WHEN MAXIMUM FLOAT  PRESENT AT FIRST POSITION,RETURN TRUE OTHERWISE RETURN FALSE.
+        ///<SUMMARY>
+        [Test]
+        public void GivenFloatMaximumNumber_WhenAtFirstPosition_ReturnTrue()
+        {
+            GetMaximum maximum = new GetMaximum();
+            float maximumNumber = maximum.FindMaximumNumber<float>(400f, 300f, 200f);
+            Assert.AreEqual(400f, maximumNumber);
+        }
+
+        ///<SUMMARY>
+        ///PASSING THREE STRING BY USING GENERIC CONCEPT WHEN MAXIMUM STRING PRESENT AT FIRST POSITION,RETURN TRUE OTHERWISE RETURN FALSE.
+        ///<SUMMARY>
+        [Test]
+        public void GivenStringMaximumNumber_WhenAtFirsttPosition_ReturnTrue()
+        {
+            GetMaximum maximum = new GetMaximum();
+            string maximumNumber = maximum.FindMaximumNumber<string>("C", "B", "C");
+            Assert.AreEqual("C", maximumNumber);
+        }
     }
 }
